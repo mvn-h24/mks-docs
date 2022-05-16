@@ -122,14 +122,14 @@ composer install
 
 
 
-11. Сгенерируйте необходимые assets:
+10. Сгенерируйте необходимые assets:
 ```bash
 ./app/console fos:js-routing:dump
 ./app/console assets:install
 ./app/console assetic:dump --symlink
 ```
-
-12. Настройте хост для проекта, перейдите по адресу хоста, залогиньтесь с доступом `admin/password`.
+<!--@TODO: change last step if host already on 80:80 -->
+11. Настройте хост для проекта, перейдите по адресу хоста, залогиньтесь с доступом `admin/password`.
     - При желании можете поменять пароль для входа в систему
     ```bash
     ./app/console fos:user:change-password admin
