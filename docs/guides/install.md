@@ -120,18 +120,36 @@ composer install
 ./app/console doctrine:migrations:migrate
 ```
 
-
-
 10. Сгенерируйте необходимые assets:
 ```bash
 ./app/console fos:js-routing:dump
 ./app/console assets:install
 ./app/console assetic:dump --symlink
 ```
-<!--@TODO: change last step if host already on 80:80 -->
-<!--DDNE: I suggest to be short and clear, see below -->
+<!--@TODO: change last step if host already on 80:80 --> <!--DDNE: I suggest to be short and clear, see below -->
 11.  Cайт должен быть доступен по адресу localhost или 127.0.0.1 в браузере. залогиньтесь с доступом `admin/password`.
     - При желании можете поменять пароль для входа в систему
     ```bash
     ./app/console fos:user:change-password admin
     ```
+
+12. Настройте учетную запись для своей организации, внеся изменения в файл:
+```bash
+mks/shared/homeless/app/config/parameters.yml
+ ```
+
+13. Замените логотип в 2 папках:
+```bash
+mks/shared/homeless/web/render/
+mks/shared/homeless/app/Resources/img/
+ ```
+ 
+14. Почистите кэш:
+```bash
+./docker/docker/docker-symfony
+./app/console cache:clear --env=prod
+```
+
+<!--@TODO: define requirements for foto -->
+Вы великолепны.
+<!-- Seriously if they can install MKS using our guideline, i'm impressed -->
