@@ -123,8 +123,8 @@ composer install
 10. Сгенерируйте необходимые assets:
 ```bash
 ./app/console fos:js-routing:dump
-./app/console assets:install
-./app/console assetic:dump --symlink
+./app/console assets:install --symlink
+./app/console assetic:dump
 ```
 <!--@TODO: change last step if host already on 80:80 --> <!--DDNE: I suggest to be short and clear, see below -->
 11.  Cайт должен быть доступен по адресу localhost или 127.0.0.1 в браузере. залогиньтесь с доступом `admin/password`.
