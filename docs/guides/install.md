@@ -11,10 +11,15 @@ title: Установка
 2. Пожалуйста, заполните небольшую [анкету](https://goo.gl/forms/YjhAaqSaxAvxMKoE3)
 :::
 
+::: warning
+**Нельзя удалять папку с проектом `.mks/` после запуска сервера** 
+:::
+
 ::: info
 МКС устанавливается на ОС Linux (желательно использовать Ubuntu 18+).
 Перед началом установки МКС необходимо установить docker и docker-compose, если они не были установлены до этого.
 :::
+
 
 ## Подготовка системы
 
@@ -135,13 +140,13 @@ composer install
 
 12. Настройте учетную запись для своей организации, внеся изменения в файл:
 ```bash
-mks/shared/homeless/app/config/parameters.yml
+.mks/shared/homeless/app/config/parameters.yml
  ```
 
 13. Замените логотип в 2 папках:
 ```bash
-mks/shared/homeless/web/render/
-mks/shared/homeless/app/Resources/img/
+.mks/shared/homeless/web/render/
+.mks/shared/homeless/app/Resources/img/
  ```
  
 14. Почистите кэш:
