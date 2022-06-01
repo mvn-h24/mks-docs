@@ -131,7 +131,7 @@ composer install
 ./app/console assets:install --symlink
 ./app/console assetic:dump
 ```
-<!--@TODO: change last step if host already on 80:80 --> <!--DDNE: I suggest to be short and clear, see below -->
+<!--@TODO: change last step if host already on 80:80 -->
 11.  Cайт должен быть доступен по адресу localhost или 127.0.0.1 в браузере. залогиньтесь с доступом `admin/password`.
     - При желании можете поменять пароль для входа в систему
     ```bash
