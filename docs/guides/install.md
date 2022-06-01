@@ -129,7 +129,8 @@ composer install
 ./app/console assetic:dump --symlink
 ```
 <!--@TODO: change last step if host already on 80:80 -->
-11. Настройте хост для проекта, перейдите по адресу хоста, залогиньтесь с доступом `admin/password`.
+<!--DDNE: I suggest to be short and clear, see below -->
+11.  Cайт должен быть доступен по адресу localhost или 127.0.0.1 в браузере. залогиньтесь с доступом `admin/password`.
     - При желании можете поменять пароль для входа в систему
     ```bash
     ./app/console fos:user:change-password admin
