@@ -2,24 +2,15 @@
 title: Установка
 ---
 
+<script setup>
+import UserFormLink from '../../components/UserFormLink.vue';
+</script>
 
 # Руководство по установке
 
-::: warning
-Если вы хотите установить “МКС”: 
-1. разворачивая систему на вашем сервере, пожалуйста, не забудьте позаботиться о защите персональных данных ваших клиентов и сотрудников.
-2. Пожалуйста, заполните небольшую [анкету](https://goo.gl/forms/YjhAaqSaxAvxMKoE3)
-:::
-
-::: warning
-**Нельзя удалять папку с проектом `.mks/` после запуска сервера** 
-:::
-
 ::: info
-МКС устанавливается на ОС Linux (желательно использовать Ubuntu 18+).
-Перед началом установки МКС необходимо установить docker и docker-compose, если они не были установлены до этого.
+<UserFormLink/>
 :::
-
 
 ## Подготовка системы
 
@@ -134,15 +125,16 @@ composer install
 <!--@TODO: change last step if host already on 80:80 -->
 11.  Cайт должен быть доступен по адресу localhost или 127.0.0.1 в браузере. залогиньтесь с доступом `admin/password`.
     - При желании можете поменять пароль для входа в систему
-    ```bash
-    ./app/console fos:user:change-password admin
-    ```
+```bash
+./app/console fos:user:change-password admin
+```
 
 12. Настройте учетную запись для своей организации, внеся изменения в файл:
 ```bash
 .mks/shared/homeless/app/config/parameters.yml
  ```
 
+<!--@TODO: define requirements for foto -->
 13. Замените логотип в 2 папках:
 ```bash
 .mks/shared/homeless/web/render/
@@ -155,6 +147,5 @@ composer install
 ./app/console cache:clear --env=prod
 ```
 
-<!--@TODO: define requirements for foto -->
-Вы великолепны.
-<!-- Seriously if they can install MKS using our guideline, i'm impressed -->
+
+Вы великолепны. :cupid:
